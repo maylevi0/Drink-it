@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>צור קשר- Drink-it</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="גל מרדכי, חן כהן, מאי לוי, עדן אברמוביץ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <!--<עמוד צור קשר">-->
+        <h1 class="contact">צור קשר</h1>
+        <br />
+        <form method="post" id="form">
+            <!---===STR======== טופס יצירת קשר ==============-->
+            <input type="hidden" id="myEmail" name="name" value="maylevi06@gmail.com" />
+            <div id="pnia">
+                <p>
+                    נתקלתם בבעיה באתר?
+                    <br />
+                    <br />
+                    יש לכם מתכון ממולץ?
+                    <br />
+                    <br />
+                    נשמח שתכתבו לנו!
+                </p>
+            </div>
+    </div>
+    <div id="zorkeser">
+
+        <div>
+            <label for="fullname">שם מלא*: </label>
+            <br />
+            <input type="text" id="fullname" name="fullname" required aria-required="true"
+                   autocomplete="on" role="alert" title="הכנס את שמך" aria-invalid="true" />
+        </div>
+
+        <br />
+        <div>
+            <label for="email">דואר אלקטרוני*:</label>
+            <br />
+            <input type="email" id="email" name="email"
+                   required aria-required="true" autocomplete="on" title="הכנס את הדואר האלקטרוני שלך" aria-invalid="true" />
+        </div>
+        <br />
+        <div>
+            <label for="phonenumber">טלפון*:</label>
+            <br />
+            <input type="number" id="phonenumber" name="phonenumber"
+                   required aria-required="true" autocomplete="on" aria-describedby="int1" title="הכנס את מספר הטלפון שלך" aria-invalid="true" />
+
+            <p id="int1">הכנס מספרים בלבד! </p>
+        </div>
+        <br />
+        <div>
+            <label for="topic">
+                סוג פניה*:</labelfor>
+                <br />
+                <select id="topicselect" name="topicselect" placeholder="בחר סוג פניה" required aria-required="true" title="בחר את נושא הפניה"
+                        aria-invalid="true" />
+                <option value="1" disabled selected>בחר את נושא פניה</option>
+                <option value="2">המלצה על מתכון חדש</option>
+                <option value="3">בעיה במתכון קיים</option>
+                <option value="4">שאלות שונות</option>
+                <option value="5">אחר</option>
+                </select>
+
+        </div>
+        <br />
+
+        <div>
+            <label for="content">תוכן ההודעה*:</label>
+            <br />
+            <textarea id="content" name="content" rows="10" required aria-required="true" title="הכנס/י את תוכן ההודעה" aria-invalid="true"></textarea>
+        </div>
+        <br />
+        <div>
+            <input type="submit" name="submit1" value="שליחה">
+            <input type="reset" name="reset1" value="ניקוי טופס">
+        </div>
+    </div>
+    <div id="feedback"></div>
+    </form>
+    </div>
+    <footer>
+        <div class="buttonF">
+            <input id="Button1" type="button" value="אודות" />
+            <input id="Button2" type="button" value="צור קשר" />
+            <input id="Button3" type="button" value="מפת האתר" />
+        </div>
+
+        <div class="lastrow">
+            © כל הזכויות שמורות לצוות Drink-It
+        </div>
+    </footer>
+</body>
+</html>
