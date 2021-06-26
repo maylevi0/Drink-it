@@ -1,0 +1,162 @@
+﻿
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+
+    <!--<link href="styles/reset.css" rel="stylesheet" />-->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="jScripts/jquery-1.12.0.min.js"></script>
+
+
+</head>
+<body>
+    <div id="container">
+        <main>
+            <article>
+                <nav>
+                    <!-- תפריט -->
+                </nav>
+                <!-- אהבה בין פרי לאלכוהול מתחילה כאן -->
+            </article>
+            <section>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="textOnImg">
+                            <h1 class="hhomepage">אהבה בין אלכוהול לפרי מתחילה כאן</h1>
+                            <p class="fontSize"> פה תוכלו להכין קוקטיילים עם פירות </p>
+                            <p class="fontSize">ולהכיר את הכלים והפעולות הדרושים להכנת משקאות מקצועיים</p>
+                        </div>
+                        <img class="imgFirst" src="imagehomepage/strawbarryimage.png" />
+                    </div>
+                    <div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="textOnImg">
+                            <h1 class="hhomepage">אהבה בין אלכוהול לפרי מתחילה כאן</h1>
+                            <p> פה תוכלו להכין קוקטיילים עם פירות </p>
+                            <p>ולהכיר את הכלים והפעולות הדרושים להכנת משקאות מקצועיים</p>
+                        </div>
+                        <img class="imgFirst" src="imagehomepage/orangeimage.png" />
+                    </div>
+                    <div>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot2" onclick="currentSlide(3)"></span>
+                        <span class="dot2" onclick="currentSlide(4)"></span>
+                    </div>
+                    <div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+            </section>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+            <!-- היתרונות של פירות במשקה אלכוהולי -->
+            <section>
+                <div class="stripbenefits">
+                    <img id="imgItronontRight" src="imagehomepage/totix.png" />
+                    <div id="buttonRight"><p>להכנת קוקטייל "תותיקס" <br /> פירות יער >> תות</p></div>
+                    <h1 class="hhomepage">היתרונות של פירות במשקה אלכוהולי </h1>
+                    <p id="itronot">
+                        > טעמים פירותיים מאזנים את החוזק והמרירות של האלכוהול <br />
+                        > פירות מהווים תוספת מעולה של ויטמינים לתוך המשקה <br />
+                        > פירות מקפיצים את הצבעוניות והנראות של הקוקטייל <br />
+                        > קוקטייל עם פירות מצטלם הרבה יותר טוב <br />
+                    </p>
+                    <img id="imgItronontLeft" src="imagehomepage/dakiri.png" />
+                    <div id="buttonLeft"><p>להכנת קוקטייל "דאקרי תות" <br /> פירות יער >> תות</p></div>
+
+                </div>
+            </section>
+
+            <!-- בואו ללמוד על -->
+            <section class="strip3">
+                <h2 class="A">בואו ללמוד על...</h2>
+                <img class="imgpositionright" src="imagehomepage/cocktail_strawberry.png" />
+                <div class="mikom1">
+                    <div> <img class="img0" src="imagehomepage/glass2.png" /></div>
+                    <div> <img class="img1" src="imagehomepage/glass1.png" /> </div>
+                    <div> <p class="B">כוסות</p></div>
+                </div>
+                <div class="mikom1">
+                    <div> <img class="img0" src="imagehomepage/siker.png" /></div>
+                    <div> <img class="img1" src="imagehomepage/siker2.png" /> </div>
+                    <div><p class="B">כלים ופעולות</p></div>
+                </div>
+                <div class="mikom1">
+                    <div> <img class="img0" src="imagehomepage/alcohol.png" /> </div>
+                    <div> <img class="img1" src="imagehomepage/alcohol2.png" /> </div>
+                    <div><p class="B"> סוגי אלכוהול</p></div>
+                </div>
+                <img class="imgpositionleft" src="imagehomepage/tapuz_cocktail.png" />
+            </section>
+
+            <!-- הצצה למתכונים שלנו -->
+            <section class="strip1">
+                <h2 class="A">הצצה למתכונים שלנו</h2>
+                <div class="mikom1">
+                    <div class="ofhidden imgZoom1"> <img class="imgmomlatz" src="imagehomepage/redbarry.png" /></div>
+                    <div><p class="B">רד ברי</p></div>
+                    <div><p class="fontSize">פירות יער>> פטל</p></div>
+                </div>
+                <div class="mikom1">
+                    <div class="ofhidden imgZoom1">  <img class="imgmomlatz" src="imagehomepage/harvywelengerg.png" /></div>
+                    <div><p class="B">הארווי וולבנגר</p></div>
+                    <div><p class="fontSize">פירות הדר>> תפוז</p></div>
+                </div>
+                <div class="mikom1">
+                    <div class="ofhidden imgZoom1"> <img class="imgmomlatz" src="imagehomepage/mohitostrawbarry.png" /></div>
+                    <div><p class="B">מוחיטו תות</p></div>
+                    <div><p class="fontSize"> פירות יער>> תות</p></div>
+                </div>
+                <div class="mikom1">
+                    <div class="ofhidden imgZoom1"> <img class="imgmomlatz" src="imagehomepage/margaritakiwi.png" /> </div>
+                    <div><p class="B">מרגריטה קיווי</p></div>
+                    <div><p class="fontSize"> פירות אקזוטיים>> קיווי</p></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
